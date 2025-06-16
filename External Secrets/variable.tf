@@ -25,27 +25,3 @@ variable "room_id" {
 #     "ISTA_EDGE" : "YjJpdXNlcjozZXd0RU5wUmQtYixxdWo3"
 #   }
 #   }
-variable "april_client_id" {
-    type        = string
-    sensitive   = true
-  }
-variable "april_client_secret" {
-  type        = string
-  sensitive   = true
-}
-variable "ista_edge" {
-  type        = string
-  sensitive   = true
-}
-variable "scope" {
-  type        = string
-  sensitive   = true
-}
-variable "tric_emea" {
-  type        = string
-  sensitive   = true
-}
-variable "tric_us" {
-  type        = string
-  sensitive   = true
-}

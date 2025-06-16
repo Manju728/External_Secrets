@@ -29,7 +29,7 @@ jobs:
           TF_VAR_scope: ${{ secrets.SCOPE }}
           TF_VAR_tric_emea: ${{ secrets.TRIC_EMEA}}
           TF_VAR_tric_us: ${{secrets.TRIC_US}}
-          shell: bash
+        shell: bash
         run: terraform plan
 #      - name: Terraform Apply
 #        run: terraform apply -auto-approve
