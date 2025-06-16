@@ -35,5 +35,17 @@ jobs:
         run: |
           cd 'External Secrets'
           terraform plan
+      - name: Terraform Plan
+        env:
+          TF_VAR_april_client_id: ${{ secrets.APRIL_CLIENT_ID }}
+          TF_VAR_april_client_secret: ${{ secrets.APRIL_CLIENT_SECRET }}
+          TF_VAR_ista_edge: ${{ secrets.ISTA_EDGE }}
+          TF_VAR_scope: ${{ secrets.SCOPE }}
+          TF_VAR_tric_emea: ${{ secrets.TRIC_EMEA}}
+          TF_VAR_tric_us: ${{secrets.TRIC_US}}
+        shell: bash
+        run: |
+          cd 'External Secrets'
+          terraform apply
 #      - name: Terraform Apply
 #        run: terraform apply -auto-approve
