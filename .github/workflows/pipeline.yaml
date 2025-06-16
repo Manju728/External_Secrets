@@ -20,7 +20,9 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
       - name: Terraform Init
-        run: terraform init
+        run:
+          cd 'External Secrets'
+          terraform init
       - name: Terraform Plan
         env:
           TF_VAR_april_client_id: ${{ secrets.APRIL_CLIENT_ID }}
@@ -30,6 +32,8 @@ jobs:
           TF_VAR_tric_emea: ${{ secrets.TRIC_EMEA}}
           TF_VAR_tric_us: ${{secrets.TRIC_US}}
         shell: bash
-        run: terraform plan
+        run:
+          cd 'External Secrets'
+          terraform plan
 #      - name: Terraform Apply
 #        run: terraform apply -auto-approve
