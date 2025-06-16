@@ -20,7 +20,7 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
       - name: Terraform Init
-        run:
+        run: |
           cd 'External Secrets'
           terraform init
       - name: Terraform Plan
@@ -32,7 +32,7 @@ jobs:
           TF_VAR_tric_emea: ${{ secrets.TRIC_EMEA}}
           TF_VAR_tric_us: ${{secrets.TRIC_US}}
         shell: bash
-        run:
+        run: |
           cd 'External Secrets'
           terraform plan
 #      - name: Terraform Apply
