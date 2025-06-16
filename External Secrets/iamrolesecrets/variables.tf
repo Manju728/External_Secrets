@@ -17,7 +17,7 @@ variable "services" {
 variable "aws_region" {
   description = "AWS Region in which resource are deployed in"
   type        = string
-  default     = "eu-central-1"
+  default     = "ap-south-1"
 }
 
 variable "room_id" {
