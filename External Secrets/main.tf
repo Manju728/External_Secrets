@@ -5,5 +5,6 @@ module "secrets_and_roles" {
   room_id          = var.room_id
   service          = "april-cert-nginx-proxy"
   Namespace        = "tpc"
-  # secret_data_json = jsonencode(var.new_secret)
+  secret_data_json = jsonencode(local.new_secret)
 }
+

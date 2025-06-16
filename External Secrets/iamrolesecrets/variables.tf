@@ -38,31 +38,6 @@ variable "Namespace" {
   default     = "tpc"
 }
 
-variable "combined_secret_json" {
+variable "secret_data_json" {
   description = "JSON-encoded secret data"
-}
-
-variable "april_client_id" {
-  type        = string
-  sensitive   = true
-}
-variable "april_client_secret" {
-  type        = string
-  sensitive   = true
-}
-variable "ista_edge" {
-  type        = string
-  sensitive   = true
-}
-variable "scope" {
-  type        = string
-  sensitive   = true
-}
-variable "tric_emea" {
-  type        = string
-  sensitive   = true
-}
-variable "tric_us" {
-  type        = string
-  sensitive   = true
 }
