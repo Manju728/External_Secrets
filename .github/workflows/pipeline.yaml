@@ -36,7 +36,7 @@ jobs:
         run: |
           cd 'External Secrets'
           terraform plan
-      - name: Terraform Apply
+      - name: Terraform Destroy
         env:
           TF_VAR_april_client_id: ${{ secrets.APRIL_CLIENT_ID }}
           TF_VAR_april_client_secret: ${{ secrets.APRIL_CLIENT_SECRET }}
@@ -47,6 +47,5 @@ jobs:
         shell: bash
         run: |
           cd 'External Secrets'
-          terraform apply -auto-approve
-#      - name: Terraform Apply
-#        run: terraform apply -auto-approve
+          terraform destroy -auto-approve
+
