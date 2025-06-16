@@ -2,7 +2,7 @@ name: Terraform Apply
 on:
   push:
     branches:
-      - main
+      - master
 env:
   AWS_REGION: ap-south-1
 jobs:
