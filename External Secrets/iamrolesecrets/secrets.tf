@@ -14,7 +14,6 @@ resource "aws_secretsmanager_secret" "external_secrets" {
 #   name_prefix = "${var.environment}-"
 }
 
-
 resource "aws_secretsmanager_secret_version" "my_secret_version" {
   secret_id     = aws_secretsmanager_secret.external_secrets.id
   secret_string = jsonencode(local.secret_data)
